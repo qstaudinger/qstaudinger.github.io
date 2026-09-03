@@ -1,0 +1,470 @@
+ %-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=2cm, right=1.5cm, bottom=2cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubheadingDetail}[5]{
+\vspace{0.5mm}\item
+    \begin{tabularx}{0.98\textwidth}[t]{
+        @{}>{\raggedright\arraybackslash}X
+        >{\raggedleft\arraybackslash}p{3.4cm}@{}
+    }
+        \textbf{#1} & \textit{\footnotesize #4} \\
+        \textit{\footnotesize #3} & \footnotesize #2 \\
+        \textit{\footnotesize #5} &
+    \end{tabularx}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Quentin Staudinger} % Your Name
+\newcommand{\course}{Graduate Student of Economics} % Your Program
+\newcommand{\roll}{born in Muenster, 2001} % Your Roll No.
+\newcommand{\phone}{1577 3759410} % Your Phone Number
+\newcommand{\emaila}{quentin.staudinger@hhu.de} %Email 1
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+% Header
+\begin{center}
+    {\Huge\textbf{Quentin Staudinger}}
+\end{center}
+\vspace{-4mm}
+
+\begin{center}
+    \small{
+    +49 (40) 2395-20223 | \href{mailto:quentin.staudinger@uni-hamburg.de}{quentin.staudinger@uni-hamburg.de}
+    }
+\end{center}
+\vspace{-4mm}
+
+\begin{center}
+    \small{
+    \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/quentin-staudinger/}{quentin-staudinger} | 
+    \socialicon{\faGithub} \href{https://github.com/qstaudinger}{qstaudinger}
+    }
+\end{center}
+\vspace{-8mm}
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+\vspace{-0.5mm}
+\resumeSubHeadingListStart
+
+\vspace{0.5mm}\item
+\begin{tabularx}{0.98\textwidth}[t]{
+    @{}>{\raggedright\arraybackslash}X
+    >{\raggedleft\arraybackslash}p{3.4cm}@{}
+}
+    \textbf{University of Hamburg}
+    & \textit{\footnotesize 08/2026 -- Present} \\
+    \textit{\footnotesize Doctoral Studies in Economics,
+    Hamburg Center for Health Economics (HCHE)}
+    & \footnotesize Hamburg, GER \\
+    \textit{\footnotesize DFG Research Training Group 2805:
+    Managerial and Economic Dimensions of Health Care Quality}
+    & \\
+    \textit{\footnotesize ``Provider Decision-Making under Financial Incentives,
+    Regulation, and Technological Change''}
+    &
+\end{tabularx}
+\vspace{-2.4mm}
+
+\resumeSubheadingDetail
+  {University of Düsseldorf}{Düsseldorf, GER}
+  {M.Sc. in Economics. 
+  %Grade: 1.7
+  }
+  {10/2023 -- 04/2026}
+  {Focus: Econometrics, Causal Inference, and Public Economics.}
+
+\resumeSubheadingDetail
+  {University of California, Davis}{Davis, US}
+  {Visiting Graduate Student. 
+  %GPA: 4.0
+  }
+  {09/2024 -- 12/2024}
+  {Graduate coursework in Statistics and Economics.}
+
+\resumeSubheadingDetail
+  {University of Düsseldorf}{Düsseldorf, GER}
+  {B.Sc. in Economics.
+  %Grade: 1.5
+  }
+  {10/2021 -- 09/2023}
+  {Focus: Econometrics, Statistics, and Digital Economics.}
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------ACADEMIC POSITIONS-----------------
+\section{\textbf{Academic Positions and Affiliations}}
+\vspace{-0.5mm}
+\resumeSubHeadingListStart
+
+\resumeSubheadingDetail
+  {University of Hamburg}{Hamburg, GER}
+  {Research Associate, Hamburg Center for Health Economics (HCHE)}
+  {08/2026 -- Present}
+  {Supervisors: Prof. Dr. Jonas Schreyögg and Prof. Dr. Biliana Yontcheva}
+
+\resumeSubheadingDetail
+  {Düsseldorf Institute for Competition Economics (DICE)}{Düsseldorf, GER}
+  {Research Affiliate}
+  {05/2026 -- Present}
+  {Research on pricing algorithms and competitive dynamics, using deep learning and empirical methods.}
+
+\resumeSubheadingDetail
+  {Düsseldorf Institute for Competition Economics (DICE)}{Düsseldorf, GER}
+  {Research Assistant (interrupted 02/2025--01/2026)}
+  {02/2023 -- 07/2026}
+  {Research, data preparation, teaching materials, and conference support.}
+
+\resumeSubheadingDetail
+  {Chair of Statistics and Econometrics, University of Düsseldorf}{Düsseldorf, GER}
+  {Teaching Assistant}
+  {10/2022 -- 09/2024}
+  {Teaching descriptive and inferential statistics for undergraduate students.}
+
+\resumeSubHeadingListEnd
+\vspace{-4.5mm}
+
+
+%-----------RESEARCH INTERESTS-----------
+\section{\textbf{Research Interests}}
+\vspace{-0.5mm}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \item{
+    \textbf{Fields}{: Health Economics, Applied Microeconomics, Economics of Artificial Intelligence} \\
+    \textbf{Methods}{: Data Science, Causal Inference, Econometrics, Machine Learning}
+    }
+\end{itemize}
+\vspace{-5mm}
+
+%-----------WORK IN PROGRESS-----------------
+\section{\textbf{Work in Progress}}
+\vspace{-0.5mm}
+\begin{itemize}[
+    leftmargin=0.05in,
+    rightmargin=0in,
+    label={},
+    itemsep=0.8mm,
+    topsep=0mm,
+    parsep=0mm,
+    partopsep=0mm
+]
+
+\item
+{\footnotesize \textit{Hospital Responses to Degressive Reimbursement: Evidence from
+German Health Insurance Claims} (with Robert Messerle and Jonas Schreyögg)}
+
+\item
+{\footnotesize \textit{Fuel Price Forecasting in German Retail Gasoline Markets using Spatio-Temporal Graph Neural Networks} (with Mara Mattes)}
+
+\item
+{\footnotesize \textit{Algorithmic Coercion: Application to the Gasoline Market}
+(with Leona Jung and Jacob Schildknecht)}
+
+\end{itemize}
+\vspace{-1.5mm}
+
+%-----------TEACHING-----------------
+\section{\textbf{Teaching Experience}}
+\vspace{-0.5mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {University of Hamburg}{Hamburg, GER}
+  {Introduction to Academic Research, B.Sc.}
+  {2026 -- 2027}
+
+\resumeSubheading
+  {University of Düsseldorf}{Düsseldorf, GER}
+  {Inferential Statistics, B.Sc.}
+  {2023 -- 2024}
+
+\resumeSubheading
+  {University of Düsseldorf}{Düsseldorf, GER}
+  {Descriptive Statistics, B.Sc.}
+  {2022 -- 2023}
+
+\resumeSubHeadingListEnd
+\vspace{-4.5mm}
+
+
+
+%-----------SCHOLARSHIPS-----------------
+\section{\textbf{Scholarships and Grants}}
+\vspace{-0.5mm}
+\resumeSubHeadingListStart
+
+\resumePOR{Social Competence Mobility Grant}
+  { Summer School, DAAD}
+  {06/2025 -- 08/2025}
+\vspace{-1mm}
+
+\resumePOR{Social Competence Mobility Grant}
+  { Exchange Semester, DAAD}
+  {09/2024 -- 12/2024}
+\vspace{-1mm}
+
+\resumePOR{German National Scholarship}
+  { Academic Years 2023 and 2024}
+  {10/2022 -- 09/2024}
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+%-----------CONFERENCES AND TRAINING-----------------
+\section{\textbf{Conferences, Workshops and Summer Schools}}
+\vspace{-0.5mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Machine Learning Summer School: Generative AI}{London, GB}
+  {London School of Economics and Political Science (LSE)}
+  {06/2025}
+\vspace{-1mm}
+
+\resumeSubheading
+  {Machine Learning Summer School: Representation Learning}{Oxford, GB}
+  {Mathematical Institute, University of Oxford}
+  {08/2025}
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+%-----------PROFESSIONAL EXPERIENCE-----------------
+\section{\textbf{Additional Professional Experience}}
+\vspace{-0.5mm}
+\resumeSubHeadingListStart
+
+\resumeSubheadingDetail
+  {Federal Cartel Office}{Bonn, GER}
+  {Intern, Department for Economic Issues in Competition Policy}
+  {01/2025 -- 04/2025}
+  {Statistical analyses for merger and antitrust investigations.}
+
+\resumeSubheading
+  {State Sports Federation, NRW}{Münster, GER}
+  {Federal Volunteer Service}
+  {09/2020 -- 08/2021}
+
+\resumeSubHeadingListEnd
+\vspace{-4.5mm}
+
+
+%-----------SERVICE AND LEADERSHIP-----------------
+\section{\textbf{Leadership and Service}}
+\vspace{-0.5mm}
+\resumeSubHeadingListStart
+
+\resumeSubheadingDetail
+  {Event Director and Head of Organizing Committee}{Münster, GER}
+  {Sparda Münster City Triathlon, Tri Finish Münster}
+  {10/2018 -- Present}
+  {Strategic planning and coordination for an event with 15,000+ Participants and Visitors.}
+\vspace{-1mm}
+
+\resumeSubheading
+  {Student Council}{Düsseldorf, GER}
+  {Faculty of Business Administration and Economics}
+  {09/2022 -- 09/2025}
+\vspace{-1mm}
+
+\resumeSubheading
+  {Faculty Council}{Düsseldorf, GER}
+  {Faculty of Business Administration and Economics}
+  {10/2023 -- 09/2025}
+\vspace{-1mm}
+
+\resumeSubheading
+  {Examination Board}{Düsseldorf, GER}
+  {Faculty of Business Administration and Economics}
+  {10/2023 -- 09/2024}
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+%-----------MEMBERSHIPS-----------------
+\section{\textbf{Memberships}}
+\vspace{-0.5mm}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{International Health Economics Association}
+        & \textit{\footnotesize Since 2026} \\
+        \textbf{Association for Social Policy}
+        & \textit{\footnotesize Since 2025} \\
+        \textbf{CorrelAid}
+        & \textit{\footnotesize Since 2025} \\
+        \textbf{German Association for the United Nations}
+        & \textit{\footnotesize Since 2025}
+    \end{tabular*}
+\end{itemize}
+\vspace{-5mm}
+
+%----------- SKILLS-----------------
+\section{\textbf{Skills and Languages}}
+\vspace{-0.5mm}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \item{
+    \textbf{Languages}{: German (Native), English (Fluent), French (Intermediate), Swedish (Beginner)} \\
+    \textbf{Programming languages}{: Python, R, Stata, SQL} \\
+    \textbf{Web development}{: WordPress, Joomla, TYPO3} \\
+    \textbf{Other skills}{: MS Office, LaTeX, Git, Cloud Services (e.g., AWS), Linux}
+    }
+\end{itemize}
+
+%----------- ACADEMIC REFERENCES -----------
+\section{\textbf{Academic References}}
+\vspace{-0.5mm}
+\begin{minipage}[t]{0.56\textwidth}
+\textbf{Prof. Dr. Jannis Kück}\\
+Düsseldorf Institute for Competition Economics (DICE)\\
+Heinrich Heine University Düsseldorf\\
+Universitätsstr. 1\\
+40225 Düsseldorf, Germany\\
+\faPhone\ +49 211 81-10238\\
+\faEnvelope\ \href{mailto:kueck@dice.hhu.de}{kueck@dice.hhu.de}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\textbf{Prof. Dr. Jonas Schreyögg}\\
+Hamburg Center for Health Economics\\
+University of Hamburg\\
+Esplanade 36\\
+20354 Hamburg, Germany\\
+\faPhone\ +49 40 2395-28041\\
+\faEnvelope\ \href{mailto:jonas.schreyoegg@uni-hamburg.de}
+{jonas.schreyoegg@uni-hamburg.de}
+\end{minipage}
+
+\end{document}
