@@ -59,38 +59,50 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+% Central spacing settings
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
+
+\titleformat{\section}
+  {\scshape\raggedright\large}
+  {}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{3mm}{1.5mm}
+
+\setlist[itemize]{
+  topsep=0pt,
+  partopsep=0pt,
+  parsep=0pt,
+  itemsep=1.5mm
+}
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item{
-    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+    \textbf{#1}{\hspace{0.5mm}#2 }
   }
 }
 
 \newcommand{\resumePOR}[3]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+\item
+    \begin{tabular*}{\linewidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
         \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
     \end{tabular*}
-    \vspace{-2mm}
+    
 }
 
 \newcommand{\resumeSubheading}[4]{
-\vspace{0.5mm}\item
+\item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#4}} \\
         \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
     \end{tabular*}
-    \vspace{-2.4mm}
+    
 }
 
 \newcommand{\resumeSubheadingDetail}[5]{
-\vspace{0.5mm}\item
+\item
     \begin{tabularx}{0.98\textwidth}[t]{
         @{}>{\raggedright\arraybackslash}X
         >{\raggedleft\arraybackslash}p{3.4cm}@{}
@@ -99,19 +111,19 @@
         \textit{\footnotesize #3} & \footnotesize #2 \\
         \textit{\footnotesize #5} &
     \end{tabularx}
-    \vspace{-2.4mm}
+    
 }
 
 \newcommand{\resumeProject}[4]{
-\vspace{0.5mm}\item
+\item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#3}} \\
         \footnotesize{\textit{#2}} & \footnotesize{#4}
     \end{tabular*}
-    \vspace{-2.4mm}
+    
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
 
 % \renewcommand{\labelitemii}{$\circ$}
 \renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -120,15 +132,15 @@
 \newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
 \newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
 
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}}
 \newcommand{\cvsection}[1]{%
-\vspace{2mm}
+
 \begin{tcolorbox}
     \textbf{\large #1}
 \end{tcolorbox}
-    \vspace{-4mm}
+    
 }
 
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}%
@@ -167,10 +179,10 @@
 
 %-----------EDUCATION-----------
 \section{\textbf{Education}}
-\vspace{-0.5mm}
+
 \resumeSubHeadingListStart
 
-\vspace{0.5mm}\item
+\item
 \begin{tabularx}{0.98\textwidth}[t]{
     @{}>{\raggedright\arraybackslash}X
     >{\raggedleft\arraybackslash}p{3.4cm}@{}
@@ -187,7 +199,6 @@
     Regulation, and Technological Change''}
     &
 \end{tabularx}
-\vspace{-2.4mm}
 
 \resumeSubheadingDetail
   {University of Düsseldorf}{Düsseldorf, GER}
@@ -214,11 +225,10 @@
   {Focus: Econometrics, Statistics, and Digital Economics.}
 
 \resumeSubHeadingListEnd
-\vspace{-5.5mm}
 
 %-----------ACADEMIC POSITIONS-----------------
 \section{\textbf{Academic Positions and Affiliations}}
-\vspace{-0.5mm}
+
 \resumeSubHeadingListStart
 
 \resumeSubheadingDetail
@@ -246,23 +256,20 @@
   {Teaching descriptive and inferential statistics for undergraduate students.}
 
 \resumeSubHeadingListEnd
-\vspace{-4.5mm}
-
 
 %-----------RESEARCH INTERESTS-----------
 \section{\textbf{Research Interests}}
-\vspace{-0.5mm}
+
 \begin{itemize}[leftmargin=0.05in, label={}]
     \item{
     \textbf{Fields}{: Health Economics, Applied Microeconomics, Economics of Artificial Intelligence} \\
     \textbf{Methods}{: Data Science, Causal Inference, Econometrics, Machine Learning}
     }
 \end{itemize}
-\vspace{-5mm}
 
 %-----------WORK IN PROGRESS-----------------
 \section{\textbf{Work in Progress}}
-\vspace{-0.5mm}
+
 \begin{itemize}[
     leftmargin=0.05in,
     rightmargin=0in,
@@ -274,107 +281,85 @@
 ]
 
 \item
-{\footnotesize \textit{Hospital Responses to Degressive Reimbursement: Evidence from
-German Health Insurance Claims} (with Robert Messerle and Jonas Schreyögg)}
+{\footnotesize \textit{Hospital Responses to Degressive Reimbursement: Evidence from German Health Insurance Claims} (with Robert Messerle and Jonas Schreyögg)}
+
+\item
+{\footnotesize \textit{The Effects of Billing Audits on Hospital Behavior and Quality of Care}}
 
 \item
 {\footnotesize \textit{Fuel Price Forecasting in German Retail Gasoline Markets using Spatio-Temporal Graph Neural Networks} (with Mara Mattes)}
 
 \item
-{\footnotesize \textit{Algorithmic Coercion: Application to the Gasoline Market}
-(with Leona Jung and Jacob Schildknecht)}
+{\footnotesize \textit{Competitive Responsiveness and Strategic Pricing:
+Evidence from Retail Gasoline Markets}
+(with Jacob Schildknecht and Leona Jung)}
 
 \end{itemize}
-\vspace{-1.5mm}
 
 %-----------TEACHING-----------------
 \section{\textbf{Teaching Experience}}
-\vspace{-0.5mm}
-\resumeSubHeadingListStart
 
-\resumeSubheading
-  {Introduction to Academic 
-  Research, B.Sc.}
-  {Hamburg, GER}
-  {University of Hamburg}
-  {2026 -- 2027}
-
-\resumeSubheading
-  {Inferential Statistics, B.Sc.}
-  {Düsseldorf, GER}
-  {University of Düsseldorf}
-  {2023 -- 2024}
-
-\resumeSubheading
-  {Descriptive Statistics, B.Sc.}
-  {Düsseldorf, GER}
-  {University of Düsseldorf}
-  {2022 -- 2023}
-
-\resumeSubHeadingListEnd
-\vspace{-4.5mm}
-
-
+{\small
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.1}
+\noindent
+\begin{tabular*}{\textwidth}[b]{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{Introduction to Academic Research}, B.Sc., Hamburg
+    & 2026 -- 2027 \\
+  \textbf{Inferential Statistics}, B.Sc., Düsseldorf
+    & 2023 -- 2024 \\
+  \textbf{Descriptive Statistics}, B.Sc., Düsseldorf
+    & 2022 -- 2023 \\
+\end{tabular*}
+\par}
 
 %-----------SCHOLARSHIPS-----------------
 \section{\textbf{Scholarships and Grants}}
-\vspace{-0.5mm}
-\resumeSubHeadingListStart
 
-\resumePOR{Social Competence Mobility Grant}
-  { Summer School, DAAD}
-  {06/2025 -- 08/2025}
-\vspace{-1mm}
-
-\resumePOR{Social Competence Mobility Grant}
-  { Exchange Semester, DAAD}
-  {09/2024 -- 12/2024}
-\vspace{-1mm}
-
-\resumePOR{German National Scholarship}
-  { Academic Years 2023 and 2024}
-  {10/2022 -- 09/2024}
-
-\resumeSubHeadingListEnd
-\vspace{-5mm}
+{\small
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.1}
+\noindent
+\begin{tabular*}{\textwidth}[b]{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{Social Competence Mobility Grant}, Summer School, DAAD
+    & 06/2025 -- 08/2025 \\
+  \textbf{Social Competence Mobility Grant}, Exchange Semester, DAAD
+    & 09/2024 -- 12/2024 \\
+  \textbf{German National Scholarship}, Academic Years 2023 and 2024
+    & 10/2022 -- 09/2024 \\
+\end{tabular*}
+\par}
 
 %-----------CONFERENCES AND TRAINING-----------------
 \section{\textbf{Conferences, Workshops and Summer Schools}}
-\vspace{-0.5mm}
-\resumeSubHeadingListStart
 
-\resumeSubheading
-  {Machine Learning Summer School, Generative AI (Attendee)}{London, GB}
-  {London School of Economics and Political Science (LSE)}
-  {06/2025}
-\vspace{-1mm}
-
-\resumeSubheading
-  {Machine Learning Summer School, Representation Learning (Attendee)}{Oxford, GB}
-  {Mathematical Institute, University of Oxford}
-  {08/2025}
-
-\vspace{-1mm}
-
-\resumeSubheading
-  {Research-in-Progress Workshop (Presentation)}{Bremen, GER}
-  {HCHE, University of Hamburg}
-  {10/2026}
-
-
-\resumeSubHeadingListEnd
-\vspace{-5mm}
+{\small
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.1}
+\noindent
+\begin{tabular*}{\textwidth}[b]{@{}l@{\extracolsep{\fill}}r@{}}
+  \textbf{NeurIPS}, Sydney (Attendee)
+    & 12/2026 \\
+  \textbf{Causal Data Science Meeting}, Online (Attendee)
+    & 11/2026 \\
+  \textbf{Research-in-Progress Workshop}, HCHE, Bremen (Presentation)
+    & 10/2026 \\
+  \textbf{ML Summer School: Representation Learning}, Oxford (Attendee)
+    & 08/2025 \\
+  \textbf{ML Summer School: Generative AI}, LSE, London (Attendee)
+    & 06/2025 \\
+\end{tabular*}
+\par}
 
 %-----------PROFESSIONAL EXPERIENCE-----------------
 \section{\textbf{Additional Professional Experience}}
-\vspace{-0.5mm}
+
 \resumeSubHeadingListStart
 
-\resumeSubheadingDetail
+\resumeSubheading
   {Federal Cartel Office}{Bonn, GER}
   {Intern, Department for Economic Issues in Competition Policy}
   {01/2025 -- 04/2025}
-  {Statistical analyses for merger and antitrust investigations.}
 
 \resumeSubheading
   {State Sports Federation, NRW}{Münster, GER}
@@ -382,32 +367,26 @@ German Health Insurance Claims} (with Robert Messerle and Jonas Schreyögg)}
   {09/2020 -- 08/2021}
 
 \resumeSubHeadingListEnd
-\vspace{-4.5mm}
-
 
 %-----------SERVICE AND LEADERSHIP-----------------
 \section{\textbf{Leadership and Service}}
-\vspace{-0.5mm}
+
 \resumeSubHeadingListStart
 
-\resumeSubheadingDetail
+\resumeSubheading
   {Event Director and Head of Organizing Committee}{Münster, GER}
   {Sparda Münster City Triathlon, Tri Finish Münster}
-  {10/2018 -- Present}
-  {Strategic planning and coordination for an event with 15,000+ Participants and Visitors.}
-\vspace{-1mm}
+  {10/2021 -- Present}
 
 \resumeSubheading
   {Student Council}{Düsseldorf, GER}
   {Faculty of Business Administration and Economics}
   {09/2022 -- 09/2025}
-\vspace{-1mm}
 
 \resumeSubheading
   {Faculty Council}{Düsseldorf, GER}
   {Faculty of Business Administration and Economics}
   {10/2023 -- 09/2025}
-\vspace{-1mm}
 
 \resumeSubheading
   {Examination Board}{Düsseldorf, GER}
@@ -415,11 +394,10 @@ German Health Insurance Claims} (with Robert Messerle and Jonas Schreyögg)}
   {10/2023 -- 09/2024}
 
 \resumeSubHeadingListEnd
-\vspace{-5mm}
 
 %-----------MEMBERSHIPS-----------------
 \section{\textbf{Memberships}}
-\vspace{-0.5mm}
+
 \begin{itemize}[leftmargin=0.05in, label={}]
     \item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -433,11 +411,10 @@ German Health Insurance Claims} (with Robert Messerle and Jonas Schreyögg)}
         & \textit{\footnotesize Since 2025}
     \end{tabular*}
 \end{itemize}
-\vspace{-5mm}
 
 %----------- SKILLS-----------------
 \section{\textbf{Skills and Languages}}
-\vspace{-0.5mm}
+
 \begin{itemize}[leftmargin=0.05in, label={}]
     \item{
     \textbf{Languages}{: German (Native), English (Fluent), French (Intermediate), Swedish (Beginner)} \\
@@ -449,10 +426,10 @@ German Health Insurance Claims} (with Robert Messerle and Jonas Schreyögg)}
 
 %----------- ACADEMIC REFERENCES -----------
 \section{\textbf{Academic References}}
-\vspace{-0.5mm}
-\begin{minipage}[t]{0.56\textwidth}
+
+\begin{minipage}[t]{0.5\textwidth}
 \textbf{Prof. Dr. Jannis Kück}\\
-Düsseldorf Institute for Competition Economics (DICE)\\
+Düsseldorf Institute for Competition Economics\\
 Heinrich Heine University Düsseldorf\\
 Universitätsstr. 1\\
 40225 Düsseldorf, Germany\\
